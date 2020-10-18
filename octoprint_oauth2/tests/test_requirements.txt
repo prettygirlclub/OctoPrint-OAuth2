@@ -1,3 +1,0 @@
-requests_oauthlib
-pytest
-selenium

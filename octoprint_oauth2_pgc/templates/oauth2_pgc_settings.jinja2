@@ -1,0 +1,86 @@
+<h3>OAuth2 Login Settings</h3>
+<!--<pre>settings.accessControl.enabled: <span data-bind="value: settings.accessControl.enabled"></span></pre>-->
+<form class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label">{{ _('Client ID') }}</label>
+        <div class="controls">
+            <input type="text" autocomplete="off" class="input-block-level" data-bind="value: settings.plugins.oauth2_pgc.client_id">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('Client Secret') }}</label>
+        <div class="controls">
+            <input type="password" autocomplete="off" class="input-block-level" data-bind="value: settings.plugins.oauth2_pgc.client_secret">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('Callback URL') }}</label>
+        <div class="controls">
+            <input type="password" autocomplete="off" class="input-block-level" data-bind="value: settings.plugins.oauth2_pgc.callback_url">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">{{ _('Organization') }}</label>
+        <div class="controls">
+            <input type="text" autocomplete="off" class="input-block-level" data-bind="value: settings.plugins.oauth2_pgc.organization">
+        </div>
+    </div>
+
+    <div class="advanced_options">
+
+        <div><small><a href="#" class="muted" data-bind="toggleContent: { class: 'fa-caret-right fa-caret-down', parent: '.advanced_options', container: '.hide' }"><i class="fa fa-caret-right"></i> Advanced options</a></small></div>
+        <div class="hide">
+            <div class="control-group">
+                <label class="control-label">{{ _('Token Path') }}</label>
+                <div class="controls">
+                    <input type="text" autocomplete="off" class="input-block-level" data-bind="value: settings.plugins.oauth2_pgc.token_path">
+                    <div class="help-block">You normally should not have to change this.</div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{{ _('user_info_path') }}</label>
+                <div class="controls">
+                    <input type="text" autocomplete="off" class="input-block-level" data-bind="value: settings.plugins.oauth2_pgc.user_info_path">
+                    <div class="help-block">You normally should not have to change this.</div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{{ _('username_key') }}</label>
+                <div class="controls">
+                    <input type="text" autocomplete="off" class="input-block-level" data-bind="value: settings.plugins.oauth2_pgc.username_key">
+                    <div class="help-block">You normally should not have to change this.</div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">{{ _('access_token_query_key') }}</label>
+                <div class="controls">
+                    <input type="text" autocomplete="off" class="input-block-level" data-bind="value: settings.plugins.oauth2_pgc.access_token_query_key">
+                    <div class="help-block">You normally should not have to change this.</div>
+                </div>
+            </div>
+            <!--
+            <div class="control-group">
+                <label class="control-label">Dialog command</label>
+                <div class="controls">
+                    <input type="text" class="input-block-level" data-bind="value: settings.plugins.action_command_prompt.command">
+                    <div class="help-block">Use this to define the dialog command. Default is <code>M876</code>. You normally should not have to change this.</div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox" data-bind="checked: settings.plugins.action_command_prompt.enable_emergency_sending"> Enable force sending of the configured command to bypass blocking firmware routines if detected as supported. You normally should not have to change this.
+                    </label>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox" data-bind="checked: settings.plugins.action_command_prompt.enable_signal_support"> Enable signaling to the firmware that we support <code>prompt_*</code> actions if detected as supported. You normally should not have to change this.
+                    </label>
+                </div>
+            </div>
+            -->
+        </div>
+    </div>
+</form>

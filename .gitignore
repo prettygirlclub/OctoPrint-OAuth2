@@ -7,6 +7,3 @@ dist
 *.egg*
 .DS_Store
 *.zip
-.pytest*
-docs/_build*
-geckodriver.log

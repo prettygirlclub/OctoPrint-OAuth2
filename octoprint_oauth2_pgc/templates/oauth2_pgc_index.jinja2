@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OctoPrint Login</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/tentacle-32x32.png') }}">
+    <link rel="mask-icon" href="{{ url_for('static', filename='img/mask.svg') }}" color="#56BE37">
+    <link rel="mask-icon-theme" href="{{ url_for('static', filename='img/mask-theme.svg') }}" color="#56BE37">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='img/apple-touch-icon-114x114.png') }}">
+
+    {% include "parts/oauth2_pgc_login_css.jinja2" %}
+
+    {% include "parts/oauth2_pgc_login_javascripts.jinja2" %}
+</head>
+<body>
+    <div class="container">
+        <form class="form-signin" method="post" action="/plugin/oauth2_pgc/redirect">
+
+            <div id="login-error" class="alert alert-error" data-test-id="login-error">{{ _('Authentication failed.') }}</div>
+            <div id="login-offline" class="alert alert-error">{{ _('Server is currently offline.') }} <a id="login-reconnect" href="javascript:void(0)">{{ _('Reconnect...') }}</a></div>
+
+            <button class="btn btn-block btn-large btn-inverse" id="login-button" data-test-id="login-submit" type="submit">
+                <i class="fa fa-4 fa-github" aria-hidden="true"></i>
+                {{ _('Log in with GitHub') }}
+            </button>
+        </form>
+    </div>
+
+    <div id="login-overlay">
+        <div class="background"></div>
+        <div class="wrapper">
+            <div class="outer">
+                <div class="inner">
+                    <div class="content">
+                        <i class="fa fa-spinner fa-spin fa-4x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
